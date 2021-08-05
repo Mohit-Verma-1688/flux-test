@@ -18,4 +18,18 @@ flux bootstrap git \
   --username=mohit-verma-1688 \
   --password=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 \
   --token-auth=true \
-  --path=
+  --path=kubernetes/staging
+
+
+flux bootstrap git \
+  --url=git@github.com:Mohit-Verma-1688/flux-test.git \
+  --branch=main \
+  --path=kubernetes/staging
+
+export GITHUB_TOKEN=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
+
+flux bootstrap github \
+  --owner=mohit-verma-1688 \
+  --repository=https://github.com/Mohit-Verma-1688/flux-test.git1 \
+  --path=clusters/staging \
+  --personal
